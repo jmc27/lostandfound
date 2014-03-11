@@ -1,0 +1,215 @@
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031004)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-10 23:11:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 48ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/item" for 127.0.0.1 at 2014-03-10 23:12:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/item"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (111.4ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-10 23:12:36 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (1.2ms)
+Warning. Error encountered while saving cache ae9ee18ef98118e3fe035a98d12d8d095cc543f2/items.css.scssc: can't dump anonymous class #<Class:0x007f9ddcb10b30>
+
+Warning. Error encountered while saving cache ae9ee18ef98118e3fe035a98d12d8d095cc543f2/scaffolds.css.scssc: can't dump anonymous class #<Class:0x007f9ddcb10b30>
+
+Completed 200 OK in 1125ms (Views: 1123.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-10 23:12:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-10 23:12:37 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-10 23:12:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-10 23:12:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-10 23:12:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-10 23:12:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-10 23:12:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-10 23:12:38 -0400
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-10 23:12:42 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (76.9ms)
+  Rendered items/new.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2014-03-10 23:49:46 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "item"=>{"title"=>"hello", "description"=>"words", "type"=>"something"}, "commit"=>"Create Item"}
+Completed 500 Internal Server Error in 28ms
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: something is not a subclass of Item):
+  app/controllers/items_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2014-03-10 23:50:08 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "item"=>{"title"=>"hello", "description"=>"wordssdaf asdf", "type"=>"2"}, "commit"=>"Create Item"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: 2 is not a subclass of Item):
+  app/controllers/items_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2014-03-10 23:56:21 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "item"=>{"title"=>"hello", "description"=>"wordssdaf asdf", "type"=>"2"}, "commit"=>"Create Item"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: 2 is not a subclass of Item):
+  app/controllers/items_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.7ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-10 23:56:24 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-10 23:56:26 -0400
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-10 23:56:31 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (5.7ms)
+  Rendered items/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.2ms)
+  Rendered items/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 01:44:17 -0400
