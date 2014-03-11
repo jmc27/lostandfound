@@ -1,8 +1,11 @@
 Lostandfound::Application.routes.draw do
   resources :items do
     resources :title
-    resources :descrition
+    resources :description
     resources :type
+    collection do 
+      get 'search'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
