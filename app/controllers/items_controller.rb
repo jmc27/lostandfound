@@ -72,7 +72,4 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:title, :description, :type)
     end
 
-    def search
-      [:q]
-    end
 end
