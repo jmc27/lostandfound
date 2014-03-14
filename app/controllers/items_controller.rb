@@ -11,7 +11,9 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
   end
-
+  def search
+ 
+  end
   # GET /items/new
   def new
     @item = Item.new

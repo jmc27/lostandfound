@@ -1,8 +1,5 @@
 Lostandfound::Application.routes.draw do
   resources :items do
-    resources :title
-    resources :description
-    resources :type
     collection do 
       get 'search'
     end

@@ -1,3 +1,3 @@
-class Something < Item
+class Something < Type
 
 end
