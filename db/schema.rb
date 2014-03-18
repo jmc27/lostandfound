@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 20140311215211) do
   create_table "items", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "type"
+    t.integer  "type_id"
+    t.text     "owner"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,6 +27,11 @@ ActiveRecord::Schema.define(version: 20140311215211) do
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "types", force: true do |t|
+    t.string "title"
+    t.string "description"
   end
 
 end

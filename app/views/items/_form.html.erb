@@ -20,7 +20,8 @@
   </div>
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <% types_array = Type.all.map { |type| [type.title, type.id] } %>
+    <%= options_for_select(types_array) %>
   </div>
   <div class="actions">
     <%= f.submit %>
