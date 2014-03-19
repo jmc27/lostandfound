@@ -8,38 +8,41 @@
 puts "creating categories"
 Category.destroy_all
 
-songs = Category.create(title: "song", description: "Music purchased somewhere. High quality")[0]
-electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")[1]
-clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belts, etc")[2]
-jewelry = Category.create(title: "jewelry", description: "Rings, watches, necklaces, etc")[3]
+songs = Category.create(title: "song", description: "Music purchased somewhere. High quality")
+electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")
+clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belts, etc")
+jewelry = Category.create(title: "jewelry", description: "Rings, watches, necklaces, etc")
 
 owners = ["Jonathan Chu", "Pito Salas", "Yo Mama"]
 colors = ["red", "brown", "green", "white", "tiny"]
 clothingnames = ["shoes", "shirt", "pants", "hat"]
 electronicsnames = ["computer", "phone", "tv", "other"]
 jewelrynames = ["neckalce", "bracelet", "ring", "other"]
-booksnames = ["Mobie Dick", "catcher in the rye", "other"]
+songsnames = ["Lost & Found", "Shining bright", "wrong platform", "Sunday School"]
 
 adjective = ["Amazing", "The perfect", "A great"]
-
 
 puts "creating sample items"
 i = 0
 20.times do 
+	puts i
 	if i % 4 == 0
 		title = colors.sample + " " + clothingnames.sample
-		category = clothing
+		description = adjective.sample + " " + title
+  	clothing.items.create(title: title, description: description, owner: owners.sample)
 	elsif i % 4 == 1
 		title = electronicsnames.sample
-		category = electronics
+		description = adjective.sample + " " + title
+  	electronics.items.create(title: title, description: description, owner: owners.sample)
 	elsif i % 4 == 2
 		title = jewelrynames.sample
-		category = jewelry
+		description = "Shiny " + title
+  	jewelry.items.create(title: title, description: description, owner: owners.sample)
 	else
-		title = booksnames.sample
-		category = books
+		title = songsnames.sample
+		description =  title + " by  Pretty lights"
+  	songs.items.create(title: title, description: description, owner: owners.sample)
 	end	
 	i += 1
-  	description = adjective.sample + " " + title
-  	Item.create(title: title, description: description, owner: owners.sample, category: category)
+  	
 end

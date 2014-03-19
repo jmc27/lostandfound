@@ -18091,3 +18091,975 @@ Processing by ItemsController#search as HTML
   [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
   Rendered items/search.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.9ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 49]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 50]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 51]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 52]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (72.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "The perfect tiny hat"], ["owner", "Yo Mama"], ["title", "tiny hat"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "The perfect tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great red shirt"], ["owner", "Jonathan Chu"], ["title", "red shirt"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shiny other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great green pants"], ["owner", "Yo Mama"], ["title", "green pants"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shiny other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great green shoes"], ["owner", "Pito Salas"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shiny ring"], ["owner", "Yo Mama"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great green shirt"], ["owner", "Yo Mama"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "A great phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Jonathan Chu"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Yo Mama"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 16:41:44 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 53]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 54]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 55]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 56]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "The perfect green hat"], ["owner", "Jonathan Chu"], ["title", "green hat"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "A great phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Yo Mama"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00], ["description", "Amazing white shirt"], ["owner", "Jonathan Chu"], ["title", "white shirt"], ["updated_at", Wed, 19 Mar 2014 16:43:25 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Amazing other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shiny ring"], ["owner", "Pito Salas"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "A great red pants"], ["owner", "Jonathan Chu"], ["title", "red pants"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "The perfect phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Amazing brown hat"], ["owner", "Jonathan Chu"], ["title", "brown hat"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Amazing tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "A great tiny hat"], ["owner", "Pito Salas"], ["title", "tiny hat"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Amazing tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 16:43:26 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-03-19 12:46:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 12:46:30 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 464ms (Views: 423.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 12:46:31 -0400
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-19 12:46:38 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-19 12:48:50 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-19 12:50:00 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `delete' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-19 12:50:11 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-19 12:50:15 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started DELETE "/items/2" for 127.0.0.1 at 2014-03-19 12:50:20 -0400
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "id"=>"2"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/items_controller.rb:36:in `destroy'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 12:50:24 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 75ms (Views: 66.8ms | ActiveRecord: 0.5ms)
+  [1m[36mItem Load (1.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mItem Load (1.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 57]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 58]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 59]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 60]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 63], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Amazing white shirt"], ["owner", "Jonathan Chu"], ["title", "white shirt"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 62], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "The perfect other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 64], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shiny ring"], ["owner", "Jonathan Chu"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 61], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 63], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "The perfect red shoes"], ["owner", "Pito Salas"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 62], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Amazing computer"], ["owner", "Yo Mama"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 64], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 61], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 63], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "A great green pants"], ["owner", "Pito Salas"], ["title", "green pants"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 62], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "The perfect phone"], ["owner", "Jonathan Chu"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 64], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Pito Salas"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 61], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 63], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "A great white shirt"], ["owner", "Jonathan Chu"], ["title", "white shirt"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 62], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "A great computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 64], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 61], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 63], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Amazing tiny shirt"], ["owner", "Pito Salas"], ["title", "tiny shirt"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 62], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Amazing tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 64], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shiny ring"], ["owner", "Jonathan Chu"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 61], ["created_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:18:01 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 61]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 62]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 63]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 64]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:22:36 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 65]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 66]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 67]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 68]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 71], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "The perfect tiny pants"], ["owner", "Jonathan Chu"], ["title", "tiny pants"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 70], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "The perfect tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 72], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 69], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 71], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "A great green shoes"], ["owner", "Pito Salas"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 70], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "A great other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 72], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 69], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 71], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "A great tiny shoes"], ["owner", "Yo Mama"], ["title", "tiny shoes"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 70], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "The perfect computer"], ["owner", "Jonathan Chu"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 72], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 69], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 71], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Amazing green shoes"], ["owner", "Yo Mama"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 70], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Amazing tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 72], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shiny ring"], ["owner", "Jonathan Chu"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 69], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 71], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "The perfect green hat"], ["owner", "Pito Salas"], ["title", "green hat"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 70], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Amazing phone"], ["owner", "Pito Salas"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 72], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 69], ["created_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Yo Mama"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 17:23:09 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mItem Load (1.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mItem Load (0.9ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 69]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 70]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 71]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 72]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 75], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Amazing brown pants"], ["owner", "Yo Mama"], ["title", "brown pants"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 74], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "A great computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 76], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Jonathan Chu"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 73], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 75], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Amazing white pants"], ["owner", "Pito Salas"], ["title", "white pants"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 74], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "The perfect tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 76], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 73], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 75], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Amazing red shoes"], ["owner", "Yo Mama"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 74], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Amazing other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 76], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shiny ring"], ["owner", "Pito Salas"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 73], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 75], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "The perfect tiny shoes"], ["owner", "Yo Mama"], ["title", "tiny shoes"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 74], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "The perfect phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 76], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Jonathan Chu"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 73], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 75], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "The perfect green shoes"], ["owner", "Yo Mama"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 74], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "The perfect tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 76], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 73], ["created_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:28:46 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mItem Load (1.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 73]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 74]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 75]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 76]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 79], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "A great red pants"], ["owner", "Pito Salas"], ["title", "red pants"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 78], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "A great computer"], ["owner", "Jonathan Chu"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 80], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 77], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 79], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Amazing green shirt"], ["owner", "Yo Mama"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 78], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "The perfect computer"], ["owner", "Jonathan Chu"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 80], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Pito Salas"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 77], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 79], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "A great brown hat"], ["owner", "Jonathan Chu"], ["title", "brown hat"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 78], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Amazing other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 80], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 77], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 79], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "The perfect tiny pants"], ["owner", "Pito Salas"], ["title", "tiny pants"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 78], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Amazing other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 80], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Pito Salas"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 77], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 79], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Amazing brown hat"], ["owner", "Pito Salas"], ["title", "brown hat"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 78], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Amazing tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 80], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 77], ["created_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Yo Mama"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:31:08 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 77]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 79]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 80]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 83], ["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "A great red hat"], ["owner", "Pito Salas"], ["title", "red hat"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 82], ["created_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00], ["description", "The perfect other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:32:20 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 81]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 82]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 83]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 84]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 87], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Amazing tiny pants"], ["owner", "Pito Salas"], ["title", "tiny pants"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 86], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "The perfect other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 88], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 85], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 87], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "A great brown hat"], ["owner", "Yo Mama"], ["title", "brown hat"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 86], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "The perfect phone"], ["owner", "Jonathan Chu"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 88], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 85], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 87], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Amazing white pants"], ["owner", "Yo Mama"], ["title", "white pants"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 86], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 88], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 85], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Sunday School by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Sunday School"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 87], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "A great tiny pants"], ["owner", "Jonathan Chu"], ["title", "tiny pants"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 86], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "The perfect tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 88], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 85], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 87], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "A great tiny hat"], ["owner", "Pito Salas"], ["title", "tiny hat"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 86], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Amazing computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 88], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 85], ["created_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00], ["description", "wrong platform by  Pretty lights"], ["owner", "Pito Salas"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 17:32:33 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mItem Load (2.0ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 85]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 86]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 87]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 88]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 91], ["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "The perfect brown shirt"], ["owner", "Jonathan Chu"], ["title", "brown shirt"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 90], ["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "A great computer"], ["owner", "Yo Mama"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 92], ["created_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00], ["description", "Shiny bracelet"], ["owner", "Pito Salas"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 17:34:29 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 89]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 90]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 91]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 92]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 95], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Amazing red shirt"], ["owner", "Jonathan Chu"], ["title", "red shirt"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 94], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "The perfect phone"], ["owner", "Pito Salas"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 96], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Pito Salas"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 93], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 95], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Amazing white shoes"], ["owner", "Yo Mama"], ["title", "white shoes"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 94], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Amazing computer"], ["owner", "Yo Mama"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 96], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shiny ring"], ["owner", "Jonathan Chu"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 93], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 95], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "The perfect green shirt"], ["owner", "Pito Salas"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 94], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "The perfect phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 96], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 93], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Lost & Found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Lost & Found"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 95], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "A great green shirt"], ["owner", "Jonathan Chu"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 94], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "The perfect tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 96], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shiny ring"], ["owner", "Pito Salas"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 93], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 95], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Amazing tiny pants"], ["owner", "Yo Mama"], ["title", "tiny pants"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 94], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Amazing phone"], ["owner", "Pito Salas"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 96], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 93], ["created_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00], ["description", "Shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "Shining bright"], ["updated_at", Wed, 19 Mar 2014 17:43:08 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mItem Load (2.0ms)[0m  [1mSELECT "items".* FROM "items"[0m
