@@ -2,12 +2,8 @@
 
 one:
   title: MyString
-  description: MyText
-  owner: MyText
-  category_id: 1
+  description: MyString
 
 two:
   title: MyString
-  description: MyText
-  owner: MyText
-  category_id: 1
+  description: MyString

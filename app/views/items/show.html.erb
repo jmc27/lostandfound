@@ -9,10 +9,14 @@
   <strong>Description:</strong>
   <%= @item.description %>
 </p>
+<p>
+  <strong>Owner:</strong>
+  <%= @item.owner %>
+</p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @item.type %>
+  <strong>Category:</strong>
+  <%= @item.category_id %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

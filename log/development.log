@@ -6174,3 +6174,2965 @@ ActionView::Template::Error (undefined method `all' for ActionView::Template::Ty
   Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
   Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:15:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:18: syntax error, unexpected tLABEL, expecting ')'
+...    @items = Item.where (title: params[:title], type_id: par...
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:18: syntax error, unexpected tLABEL, expecting '='
+...title: params[:title], type_id: params[:type_id])
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:18: syntax error, unexpected ')', expecting keyword_end):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__929954238408989258__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.2ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:18:58 -0400
+
+SyntaxError (/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting ')'
+...    @items = Item.where (title: params[:title], type_id: par...
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting '='
+...title: params[:title], type_id: params[:type_id])
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected ')', expecting keyword_end):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__929954238408989258__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:18:59 -0400
+
+SyntaxError (/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting ')'
+...    @items = Item.where (title: params[:title], type_id: par...
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting '='
+...title: params[:title], type_id: params[:type_id])
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected ')', expecting keyword_end):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__929954238408989258__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:18:59 -0400
+
+SyntaxError (/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting ')'
+...    @items = Item.where (title: params[:title], type_id: par...
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected tLABEL, expecting '='
+...title: params[:title], type_id: params[:type_id])
+...                               ^
+/Users/jchu/Desktop/spring2014/ITO/lostandfound/app/controllers/items_controller.rb:17: syntax error, unexpected ')', expecting keyword_end):
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.3) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.3) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__929954238408989258__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (24.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.0ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "category_id" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (2.1ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.2ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "owner" text, "category_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20140319003951)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "categories" already exists: CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (25.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20140311031110)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311031110"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (139.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140319003951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319003951"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140319003951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319003951"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20140319004301)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319004301"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:44:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (114.7ms)
+  Rendered items/new.html.erb within layouts/application (157.9ms)
+Completed 500 Internal Server Error in 192ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Type):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :type %><br>
+    23:     <% types_array = Type.all.map { |type| [type.title, type.id] } %>
+    24:     <%= options_for_select(types_array) %>
+    25:   </div>
+    26:   <div class="actions">
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159861205040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159861205040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:47:47 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.8ms)
+  Rendered items/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9eba3c53b0>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:47:48 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb3b3f88>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:47:49 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.7ms)
+  Rendered items/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb0b7960>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:47:49 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb5802d0>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:49:51 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (6.3ms)
+  Rendered items/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9eba60cc68>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:49:53 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb38a638>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:49:53 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.1ms)
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9eba4a92b8>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:49:53 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.8ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb519440>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:49:54 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (1.9ms)
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb1b5e20>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_area :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852960040'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:50:58 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (5.7ms)
+  Rendered items/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9eba25fc28>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_field :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:51:00 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.0ms)
+  Rendered items/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9ebb2e6d08>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_field :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:51:25 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.0ms)
+  Rendered items/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `owner' for #<Item:0x007f9eba669c88>):
+    20:   </div>
+    21:   <div class="field">
+    22:     <%= f.label :owner %><br>
+    23:     <%= f.text_field :owner %>
+    24:   </div>
+    25:   <div class="field">
+    26:     <%= f.label :category %><br>
+  app/views/items/_form.html.erb:23:in `block in _app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__3075249779475423246_70159852173820'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb___2159703789141966792_70159861420700'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+  [1m[36m (6.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140319003951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319003951"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20140319004301)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319004301"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140311215211)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140311215211"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140319003951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319003951"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20140319005421)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "owner" text, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140319005421"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:54:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.2ms)
+  Rendered items/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@item) do |f| %>
+    2:   <% if @item.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+  app/views/items/_form.html.erb:1:in `_app_views_items__form_html_erb__4263427430160729394_70172438405280'
+  app/views/items/new.html.erb:3:in `_app_views_items_new_html_erb__121626276737101545_70172438621820'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-18 20:55:50 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (15.4ms)
+  Rendered items/new.html.erb within layouts/application (16.2ms)
+Warning. Error encountered while saving cache ae9ee18ef98118e3fe035a98d12d8d095cc543f2/items.css.scssc: can't dump anonymous class #<Class:0x007fa4969e6230>
+
+Warning. Error encountered while saving cache ae9ee18ef98118e3fe035a98d12d8d095cc543f2/categories.css.scssc: can't dump anonymous class #<Class:0x007fa4969e6230>
+
+Completed 200 OK in 1005ms (Views: 997.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 20:55:51 -0400
+
+
+Started POST "/items" for 127.0.0.1 at 2014-03-18 20:56:06 -0400
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7I+dzJzEA3hSE/4gKIbnFm7c6gbr0xarSpp6UEVxuw=", "item"=>{"title"=>"something", "description"=>"this is something", "owner"=>"Me", "category_id"=>"this"}, "commit"=>"Create Item"}
+Unpermitted parameters: category_id
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (99.9ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 00:56:06 UTC +00:00], ["description", "this is something"], ["owner", "Me"], ["title", "something"], ["updated_at", Wed, 19 Mar 2014 00:56:06 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 107ms (ActiveRecord: 101.6ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2014-03-18 20:56:07 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `type' for #<Item:0x007fa493706568>):
+    12: 
+    13: <p>
+    14:   <strong>Type:</strong>
+    15:   <%= @item.type %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_item_path(@item) %> |
+  app/views/items/show.html.erb:15:in `_app_views_items_show_html_erb___1100662852915385159_70172412470660'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered items/show.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 20:56:47 -0400
+
+
+Started GET "/index" for 127.0.0.1 at 2014-03-18 21:04:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (51.1ms)
+
+
+Started GET "/items/index" for 127.0.0.1 at 2014-03-18 21:04:19 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "index"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=index):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:06:17 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `type' for #<Item:0x007fa496c6a560>):
+    17:       <tr>
+    18:         <td><%= item.title %></td>
+    19:         <td><%= item.description %></td>
+    20:         <td><%= item.type %></td>
+    21:         <td><%= link_to 'Show', item %></td>
+    22:         <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    23:         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/items/index.html.erb:20:in `block in _app_views_items_index_html_erb__3414034434288319883_70172440460920'
+  app/views/items/index.html.erb:16:in `_app_views_items_index_html_erb__3414034434288319883_70172440460920'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:06:17 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `type' for #<Item:0x007fa498034ed8>):
+    17:       <tr>
+    18:         <td><%= item.title %></td>
+    19:         <td><%= item.description %></td>
+    20:         <td><%= item.type %></td>
+    21:         <td><%= link_to 'Show', item %></td>
+    22:         <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    23:         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/items/index.html.erb:20:in `block in _app_views_items_index_html_erb__3414034434288319883_70172450852900'
+  app/views/items/index.html.erb:16:in `_app_views_items_index_html_erb__3414034434288319883_70172450852900'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:06:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 01:11:28 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 1]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 3]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 01:13:18 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 5]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 7]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great brown pants"], ["owner", "Jonathan Chu"], ["title", "brown pants"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great tiny shoes"], ["owner", "Pito Salas"], ["title", "tiny shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "The perfect green shirt"], ["owner", "Jonathan Chu"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Amazing white hat"], ["owner", "Jonathan Chu"], ["title", "white hat"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great brown shoes"], ["owner", "Pito Salas"], ["title", "brown shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great green shoes"], ["owner", "Jonathan Chu"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Amazing brown shirt"], ["owner", "Pito Salas"], ["title", "brown shirt"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "Amazing brown hat"], ["owner", "Yo Mama"], ["title", "brown hat"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great tiny shoes"], ["owner", "Jonathan Chu"], ["title", "tiny shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "The perfect red shirt"], ["owner", "Jonathan Chu"], ["title", "red shirt"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great tiny shoes"], ["owner", "Yo Mama"], ["title", "tiny shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "The perfect green hat"], ["owner", "Pito Salas"], ["title", "green hat"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "The perfect red shoes"], ["owner", "Pito Salas"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "A great white hat"], ["owner", "Yo Mama"], ["title", "white hat"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00], ["description", "The perfect brown shoes"], ["owner", "Pito Salas"], ["title", "brown shoes"], ["updated_at", Wed, 19 Mar 2014 01:14:41 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:16:30 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:03 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:31 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:17:59 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:14 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:14 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:14 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:15 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:16 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:51 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:18:52 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:19:54 -0400
+
+
+Started GET "/items/16" for 127.0.0.1 at 2014-03-18 21:20:06 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered items/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/16" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered items/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:17 -0400
+
+
+Started GET "/items/16" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:18 -0400
+
+
+Started GET "/items/16" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered items/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:20:41 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:20:49 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:03 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:04 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:32 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:22:33 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:31:56 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:22 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:32:44 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:33:22 -0400
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2014-03-18 21:33:30 -0400
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ItemsController):
+  actionpack (4.0.3) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__1463810185395880497__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (7.9ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 45ms (Views: 36.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-18 21:58:03 -0400
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:02:33 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.4ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:04:30 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (6.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 26ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:04:32 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:13 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:14 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:15 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:15 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:15 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:05:15 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/items/do_search" for 127.0.0.1 at 2014-03-18 22:06:16 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"do_search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "do_search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=do_search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 22:06:23 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+  [1m[36mItem Load (28.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (28.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mItem Load (31.8ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mActiveRecord::SchemaMigration Load (16.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (6.8ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (18.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 9]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 11]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (62.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:12:51 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 13]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 14]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 15]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:18:25 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 17]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 18]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 19]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:19:12 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 21]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 22]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 23]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:19:39 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 25]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 26]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 27]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 28]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:20:09 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 29]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 30]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 31]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 32]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "Amazing red hat"], ["owner", "Yo Mama"], ["title", "red hat"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00], ["description", "A great computer"], ["owner", "Jonathan Chu"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 03:21:46 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 33]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 34]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 35]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 36]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "A great white hat"], ["owner", "Pito Salas"], ["title", "white hat"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00], ["description", "The perfect computer"], ["owner", "Yo Mama"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 03:22:10 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 37]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 38]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 39]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 40]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Amazing green shirt"], ["owner", "Yo Mama"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00], ["description", "Amazing phone"], ["owner", "Pito Salas"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 03:22:54 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 41]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 42]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 43]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 44]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "The perfect red hat"], ["owner", "Pito Salas"], ["title", "red hat"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00], ["description", "A great other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 03:24:22 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 45]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 46]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 47]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 48]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Books, Magazines etc."], ["title", "book"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect red shoes"], ["owner", "Jonathan Chu"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "A great bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "A great other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect red hat"], ["owner", "Yo Mama"], ["title", "red hat"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect ring"], ["owner", "Pito Salas"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Amazing catcher in the rye"], ["owner", "Pito Salas"], ["title", "catcher in the rye"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect green shirt"], ["owner", "Jonathan Chu"], ["title", "green shirt"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "A great bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "Amazing other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "A great red shirt"], ["owner", "Pito Salas"], ["title", "red shirt"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00], ["description", "The perfect neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 03:25:00 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 23:26:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 54ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 23:30:52 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", "search"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-18 23:30:57 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", "search"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Item with id=search):
+  app/controllers/items_controller.rb:7:in `show'
+
+
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/Cellar/ruby/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)

@@ -1,31 +1,27 @@
-<h1>Listing items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class = "row">
+  <h1>Listing items</h1>
+</div>
+<div class = "row">
+    <div class = "col-md-2"><h3>Title</h3></div>
+    <div class = "col-md-3"><h3>Description</h3></div>
+    <div class = "col-md-2"><h3>Owner</h3></div>
+    <div class = "col-md-2"><h3>Category</h3></div>
+</div>
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.title %></td>
-        <td><%= item.description %></td>
-        <td><%= item.type %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class = "row">
+        <div class = "col-md-2"><%= item.title %></div>
+        <div class = "col-md-3"><%= item.description %></div>
+        <div class = "col-md-2"><%= item.owner %></div>
+        <div class = "col-md-2"><%= item.category_id %></div>
+        <div class = "col-md-3">
+          <%= link_to 'Show', item %>
+          <%= link_to 'Edit', edit_item_path(item) %>
+          <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+     </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+<div class = "row">
 
 <%= link_to 'New Item', new_item_path %>
+</div>
