@@ -31355,3 +31355,71 @@ Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:32:47 -0400
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:32:48 -0400
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:33:36 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (133.6ms)
+  Rendered items/new.html.erb within layouts/application (177.9ms)
+Completed 200 OK in 211ms (Views: 210.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:33:38 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (2.3ms)
+  Rendered items/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (3.4ms)
+  Rendered items/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:35:03 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:35:05 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+  [1m[36mItem Load (6.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
