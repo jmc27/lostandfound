@@ -44,8 +44,17 @@ class ItemsController < ApplicationController
   end
 
   def do_search
-    @items = Item.where(title: params[:title], category_id: params[:category_id])
-    render :index
+    @items = []
+      if params[:all_some] == '1'
+        @items = Item.where(title: params[:title], description: params[:description], owner: params[:owner], category_id: params[:category_id])
+        render :index
+      else
+        one = Item.where(title: params[:title], category_id: params[:category_id])
+        two = Item.where(description: params[:description], category_id: params[:category_id])
+        three = Item.where(owner: params[:owner], category_id: params[:category_id])
+        @items = one + two + three
+        render :index
+      end
   end
 
 end

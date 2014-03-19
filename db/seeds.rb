@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 puts "creating categories"
 Category.destroy_all
+Item.destroy_all
 
 songs = Category.create(title: "song", description: "Music purchased somewhere. High quality")
 electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")
@@ -18,7 +19,7 @@ colors = ["red", "brown", "green", "white", "tiny"]
 clothingnames = ["shoes", "shirt", "pants", "hat"]
 electronicsnames = ["computer", "phone", "tv", "other"]
 jewelrynames = ["neckalce", "bracelet", "ring", "other"]
-songsnames = ["Lost & Found", "Shining bright", "wrong platform", "Sunday School"]
+songsnames = ["lost & found", "shining bright", "wrong platform", "sunday school", "samso"]
 
 adjective = ["Amazing", "The perfect", "A great"]
 
@@ -29,19 +30,19 @@ i = 0
 	if i % 4 == 0
 		title = colors.sample + " " + clothingnames.sample
 		description = adjective.sample + " " + title
-  	clothing.items.create(title: title, description: description, owner: owners.sample)
+  	Item.create(title: title, description: description, owner: owners.sample, category_id: clothing.id)
 	elsif i % 4 == 1
 		title = electronicsnames.sample
 		description = adjective.sample + " " + title
-  	electronics.items.create(title: title, description: description, owner: owners.sample)
+  	Item.create(title: title, description: description, owner: owners.sample, category_id: electronics.id)
 	elsif i % 4 == 2
 		title = jewelrynames.sample
-		description = "Shiny " + title
-  	jewelry.items.create(title: title, description: description, owner: owners.sample)
+		description = adjective.sample + " " + "Shiny " + title
+  	Item.create(title: title, description: description, owner: owners.sample, category_id: jewelry.id)
 	else
 		title = songsnames.sample
-		description =  title + " by  Pretty lights"
-  	songs.items.create(title: title, description: description, owner: owners.sample)
+		description =  adjective.sample + " " + title + " by  Pretty lights"
+  	Item.create(title: title, description: description, owner: owners.sample, category_id: songs.id)
 	end	
 	i += 1
   	

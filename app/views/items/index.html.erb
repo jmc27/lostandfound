@@ -1,7 +1,7 @@
-<div class = "row">
+<div class = "row row-padding">
   <h1>Listing items</h1>
 </div>
-<div class = "row">
+<div class = "row row-padding">
     <div class = "col-md-2"><h3>Title</h3></div>
     <div class = "col-md-3"><h3>Description</h3></div>
     <div class = "col-md-2"><h3>Owner</h3></div>
@@ -9,14 +9,14 @@
   </div>
 
     <% @items.each do |item| %>
-      <div class = "row">
+      <div class = "row row-padding">
         <div class = "col-md-2"><%= item.title %></div>
         <div class = "col-md-3"><%= item.description %></div>
         <div class = "col-md-2"><%= item.owner %></div>
         <div class = "col-md-2"><%= item.category_id %></div>
         <div class = "col-md-3">
-          <%= link_to 'Show', item %>
-          <%= link_to 'Edit', edit_item_path(item) %>
+          <%= link_to 'Show', item %> |
+          <%= link_to 'Edit', edit_item_path(item) %> |
           <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
      </div>
