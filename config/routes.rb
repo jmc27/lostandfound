@@ -1,6 +1,5 @@
 Lostandfound::Application.routes.draw do
-  resources :items
-
+  resources :categories
   resources :items do
     collection do 
       get 'search'
@@ -10,7 +9,7 @@ Lostandfound::Application.routes.draw do
   end
   resources :posts
 
-  resources :categories
+  
 
   root 'items#index'
   

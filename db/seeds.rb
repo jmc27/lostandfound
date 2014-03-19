@@ -8,7 +8,7 @@
 puts "creating categories"
 Category.destroy_all
 
-books = Category.create(title: "book", description: "Books, Magazines etc.")[0]
+songs = Category.create(title: "song", description: "Music purchased somewhere. High quality")[0]
 electronics = Category.create(title: "electronics", description: "Computer, Cellphone, etc")[1]
 clothing = Category.create(title: "clothing", description: "Shoes, Jackets, Belts, etc")[2]
 jewelry = Category.create(title: "jewelry", description: "Rings, watches, necklaces, etc")[3]
@@ -25,7 +25,7 @@ adjective = ["Amazing", "The perfect", "A great"]
 
 puts "creating sample items"
 i = 0
-15.times do 
+20.times do 
 	if i % 4 == 0
 		title = colors.sample + " " + clothingnames.sample
 		category = clothing
