@@ -31423,3 +31423,1565 @@ Processing by ItemsController#index as HTML
   Rendered items/index.html.erb within layouts/application (7.5ms)
 Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
   [1m[36mItem Load (6.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (25.7ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 113]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 114]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 115]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 116]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 247]]
+  [1m[35m (18.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 248]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 249]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 250]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 251]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 252]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 253]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 254]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 255]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 256]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 257]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 258]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 259]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 260]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 261]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 262]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 263]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 264]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 265]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 266]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:40:13 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 23:40:13 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:40:13 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 23:40:13 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 119], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great white shoes"], ["owner", "Pito Salas"], ["title", "white shoes"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 118], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 120], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Amazing Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 117], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect sunday school by  Pretty lights"], ["owner", "Pito Salas"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 119], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect green shoes"], ["owner", "Jonathan Chu"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 118], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 120], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great Shiny other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 117], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great shining bright by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "shining bright"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 119], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect brown shoes"], ["owner", "Yo Mama"], ["title", "brown shoes"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 118], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 120], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Amazing Shiny other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 117], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Amazing lost & found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 119], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Amazing red shirt"], ["owner", "Jonathan Chu"], ["title", "red shirt"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 118], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 120], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 117], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "Amazing sunday school by  Pretty lights"], ["owner", "Pito Salas"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 119], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect green shoes"], ["owner", "Pito Salas"], ["title", "green shoes"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 118], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect computer"], ["owner", "Yo Mama"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 120], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "The perfect Shiny ring"], ["owner", "Pito Salas"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 117], ["created_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00], ["description", "A great sunday school by  Pretty lights"], ["owner", "Yo Mama"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:40:14 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:40:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (8.1ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 383ms (Views: 326.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:40:35 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:40:36 -0400
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:40:46 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (110.4ms)
+  Rendered items/new.html.erb within layouts/application (221.6ms)
+Completed 200 OK in 264ms (Views: 263.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:40:50 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:40:53 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:40:57 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (7.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 64ms (Views: 19.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:41:05 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:41:15 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (16.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (7.6ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (20.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 117]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 118]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 119]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 120]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 267]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 268]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 269]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 270]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 271]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 272]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 273]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 274]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 275]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 276]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 277]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 278]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 279]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 280]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 281]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 282]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 283]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 284]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 285]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 286]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (75.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 123], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "A great green pants"], ["owner", "Jonathan Chu"], ["title", "green pants"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 122], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 124], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "A great Shiny ring"], ["owner", "Jonathan Chu"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 121], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect sunday school by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 123], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect red shoes"], ["owner", "Pito Salas"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 122], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 124], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 121], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing wrong platform by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 123], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect red pants"], ["owner", "Yo Mama"], ["title", "red pants"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 122], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 124], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "A great Shiny neckalce"], ["owner", "Yo Mama"], ["title", "neckalce"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 121], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect samso by  Pretty lights"], ["owner", "Pito Salas"], ["title", "samso"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 123], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing brown pants"], ["owner", "Pito Salas"], ["title", "brown pants"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 122], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "A great phone"], ["owner", "Yo Mama"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 124], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 121], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect lost & found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 123], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing red hat"], ["owner", "Jonathan Chu"], ["title", "red hat"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 122], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 124], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "Amazing Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 121], ["created_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00], ["description", "The perfect wrong platform by  Pretty lights"], ["owner", "Pito Salas"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 23:42:34 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:43:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (141.1ms)
+  Rendered items/new.html.erb within layouts/application (196.3ms)
+Completed 200 OK in 720ms (Views: 700.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:43:14 -0400
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:43:17 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:43:20 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:44:30 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:30 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:31 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=1&category_id=123&title=green+pants&description=A+great+green+pants&owner=Jonathan+Chu&commit=Search" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"1", "category_id"=>"123", "title"=>"green pants", "description"=>"A great green pants", "owner"=>"Jonathan Chu", "commit"=>"Search"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."title" = 'green pants' AND "items"."description" = 'A great green pants' AND "items"."owner" = 'Jonathan Chu' AND "items"."category_id" = 123[0m
+  Rendered items/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:44:57 -0400
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:45:02 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:01 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=1&category_id=121&title=sunday+school&description=Amazing+wrong+platform+by++Pretty+lights&owner=Pito+Salas&commit=Search" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"1", "category_id"=>"121", "title"=>"sunday school", "description"=>"Amazing wrong platform by  Pretty lights", "owner"=>"Pito Salas", "commit"=>"Search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."title" = 'sunday school' AND "items"."description" = 'Amazing wrong platform by Pretty lights' AND "items"."owner" = 'Pito Salas' AND "items"."category_id" = 121
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:46:32 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=2&category_id=121&title=sunday+school&description=Amazing+wrong+platform+by++Pretty+lights&owner=Pito+Salas&commit=Search" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"2", "category_id"=>"121", "title"=>"sunday school", "description"=>"Amazing wrong platform by  Pretty lights", "owner"=>"Pito Salas", "commit"=>"Search"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."title" = 'sunday school' AND "items"."category_id" = 121[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."description" = 'Amazing wrong platform by Pretty lights' AND "items"."category_id" = 121
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."owner" = 'Pito Salas' AND "items"."category_id" = 121[0m
+  Rendered items/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:47:15 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=2&category_id=121&title=sunday+school&description=Amazing+wrong+platform+by++Pretty+lights&owner=Pito+Salas&commit=Search" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"2", "category_id"=>"121", "title"=>"sunday school", "description"=>"Amazing wrong platform by  Pretty lights", "owner"=>"Pito Salas", "commit"=>"Search"}
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."title" = 'sunday school' AND "items"."category_id" = 121
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."description" = 'Amazing wrong platform by Pretty lights' AND "items"."category_id" = 121[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."owner" = 'Pito Salas' AND "items"."category_id" = 121
+  Rendered items/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:27 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=2&category_id=121&title=sunday+school&description=Amazing+wrong+platform+by++Pretty+lights&owner=Pito+Salas&commit=Search" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"2", "category_id"=>"121", "title"=>"sunday school", "description"=>"Amazing wrong platform by  Pretty lights", "owner"=>"Pito Salas", "commit"=>"Search"}
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."title" = 'sunday school' AND "items"."category_id" = 121[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."description" = 'Amazing wrong platform by Pretty lights' AND "items"."category_id" = 121
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."owner" = 'Pito Salas' AND "items"."category_id" = 121[0m
+  Rendered items/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:48:33 -0400
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:52:11 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (46.0ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 121]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 122]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 123]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 124]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 287]]
+  [1m[35m (13.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 288]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 289]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 290]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 291]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 292]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 293]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 294]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 295]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 296]]
+  [1m[36m (29.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 297]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 298]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 299]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 300]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 301]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 302]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 303]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 304]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 305]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 306]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (63.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 127], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "The perfect red shoes"], ["owner", "Jonathan Chu"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 126], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 128], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great Shiny ring"], ["owner", "Yo Mama"], ["title", "ring"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 125], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing lost & found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 127], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great green pants"], ["owner", "Jonathan Chu"], ["title", "green pants"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 126], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "The perfect other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 128], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 125], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "The perfect sunday school by  Pretty lights"], ["owner", "Yo Mama"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 127], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing green pants"], ["owner", "Jonathan Chu"], ["title", "green pants"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 126], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing phone"], ["owner", "Pito Salas"], ["title", "phone"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 128], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 125], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "The perfect shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "shining bright"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 127], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing tiny hat"], ["owner", "Pito Salas"], ["title", "tiny hat"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 126], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "The perfect computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 128], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great Shiny other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (10.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 125], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing sunday school by  Pretty lights"], ["owner", "Yo Mama"], ["title", "sunday school"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 127], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great red shoes"], ["owner", "Pito Salas"], ["title", "red shoes"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 126], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great tv"], ["owner", "Pito Salas"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 128], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "A great Shiny bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[35m (18.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 125], ["created_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00], ["description", "Amazing lost & found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:54:24 UTC +00:00]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:55:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (19.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 406ms (Views: 391.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:55:03 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (143.2ms)
+  Rendered items/new.html.erb within layouts/application (187.6ms)
+Completed 200 OK in 218ms (Views: 217.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:55:05 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:55:48 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=1&category_id=127&title=red+shoes&description=the+perfect+red+shoues&owner=Jonathan+Chu&commit=Search" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"1", "category_id"=>"127", "title"=>"red shoes", "description"=>"the perfect red shoues", "owner"=>"Jonathan Chu", "commit"=>"Search"}
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."title" = 'red shoes' AND "items"."description" = 'the perfect red shoues' AND "items"."owner" = 'Jonathan Chu' AND "items"."category_id" = 127[0m
+  Rendered items/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:02 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=1&category_id=127&title=red+shoes&description=The+perfect+red+shoues&owner=Jonathan+Chu&commit=Search" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"1", "category_id"=>"127", "title"=>"red shoes", "description"=>"The perfect red shoues", "owner"=>"Jonathan Chu", "commit"=>"Search"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."title" = 'red shoes' AND "items"."description" = 'The perfect red shoues' AND "items"."owner" = 'Jonathan Chu' AND "items"."category_id" = 127
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:56:23 -0400
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:56:54 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.0ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 125]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 126]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = ?  [["id", 127]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 128]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 307]]
+  [1m[35m (13.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 308]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 309]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 310]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 311]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 312]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 313]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 314]]
+  [1m[36m (36.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 315]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 316]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 317]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 318]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 319]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 320]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 321]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 322]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 323]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 324]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 325]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 326]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (28.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Music purchased somewhere. High quality"], ["title", "song"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Computer, Cellphone, etc"], ["title", "electronics"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Shoes, Jackets, Belts, etc"], ["title", "clothing"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Rings, watches, necklaces, etc"], ["title", "jewelry"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 131], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing white hat"], ["owner", "Yo Mama"], ["title", "white hat"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 130], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing tv"], ["owner", "Jonathan Chu"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 132], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "The perfect Shiny other"], ["owner", "Jonathan Chu"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 129], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great lost & found by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 131], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing red pants"], ["owner", "Pito Salas"], ["title", "red pants"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 130], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great other"], ["owner", "Pito Salas"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 132], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great Shiny bracelet"], ["owner", "Pito Salas"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 129], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "The perfect wrong platform by  Pretty lights"], ["owner", "Jonathan Chu"], ["title", "wrong platform"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 131], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great white pants"], ["owner", "Jonathan Chu"], ["title", "white pants"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 130], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great computer"], ["owner", "Jonathan Chu"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 132], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great Shiny bracelet"], ["owner", "Jonathan Chu"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (5.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 129], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing lost & found by  Pretty lights"], ["owner", "Pito Salas"], ["title", "lost & found"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 131], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing brown shirt"], ["owner", "Yo Mama"], ["title", "brown shirt"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (7.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 130], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing computer"], ["owner", "Pito Salas"], ["title", "computer"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 132], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great Shiny bracelet"], ["owner", "Yo Mama"], ["title", "bracelet"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 129], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great samso by  Pretty lights"], ["owner", "Pito Salas"], ["title", "samso"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 131], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "Amazing brown shoes"], ["owner", "Pito Salas"], ["title", "brown shoes"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 130], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "The perfect tv"], ["owner", "Yo Mama"], ["title", "tv"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["category_id", 132], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "A great Shiny other"], ["owner", "Yo Mama"], ["title", "other"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("category_id", "created_at", "description", "owner", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["category_id", 129], ["created_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00], ["description", "The perfect shining bright by  Pretty lights"], ["owner", "Pito Salas"], ["title", "shining bright"], ["updated_at", Wed, 19 Mar 2014 23:57:51 UTC +00:00]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mItem Load (7.0ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:58:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (14.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 400ms (Views: 343.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:58:29 -0400
+
+
+Started GET "/items/new" for 127.0.0.1 at 2014-03-19 19:58:35 -0400
+Processing by ItemsController#new as HTML
+  Rendered items/_form.html.erb (118.6ms)
+  Rendered items/new.html.erb within layouts/application (162.7ms)
+Completed 200 OK in 220ms (Views: 182.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:58:37 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:58:50 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 19:59:19 -0400
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:59:22 -0400
+Processing by ItemsController#search as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered items/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 19:59:52 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=1&category_id=131&title=white+hat&description=Amazing+white+hat&owner=Yo+Mama&commit=Search" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"1", "category_id"=>"131", "title"=>"white hat", "description"=>"Amazing white hat", "owner"=>"Yo Mama", "commit"=>"Search"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."title" = 'white hat' AND "items"."description" = 'Amazing white hat' AND "items"."owner" = 'Yo Mama' AND "items"."category_id" = 131
+  Rendered items/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 71ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 20:00:09 -0400
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 20:00:16 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 20:00:19 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 20:00:25 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2014-03-19 20:00:57 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/search" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+Processing by ItemsController#search as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered items/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:06 -0400
+
+
+Started GET "/items/do_search?utf8=%E2%9C%93&all_some=2&category_id=129&title=lost+%26+found&description=Amazing+wrong+platform+by++Pretty+lights&owner=Jonathan+Chu&commit=Search" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+Processing by ItemsController#do_search as HTML
+  Parameters: {"utf8"=>"✓", "all_some"=>"2", "category_id"=>"129", "title"=>"lost & found", "description"=>"Amazing wrong platform by  Pretty lights", "owner"=>"Jonathan Chu", "commit"=>"Search"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."title" = 'lost & found' AND "items"."category_id" = 129
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."description" = 'Amazing wrong platform by Pretty lights' AND "items"."category_id" = 129[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."owner" = 'Jonathan Chu' AND "items"."category_id" = 129
+  Rendered items/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-19 20:01:21 -0400
